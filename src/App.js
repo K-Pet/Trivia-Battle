@@ -1,9 +1,11 @@
 import axios from "axios";
+import Button from "@mui/material";
 import { useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Header from "./components/Header/Header";
 import Home from "./Pages/Home/Home";
+import  Create  from "./Pages/Create/Create";
 import Quiz from "./Pages/Quiz/Quiz";
 import Result from "./Pages/Result/Result";
 
@@ -47,6 +49,10 @@ function App() {
           </Route>
           <Route path="/result" element = {
             <Result name={name} score={score} />
+          }>
+          </Route>
+          <Route path="/create" element = {
+            <Create/>
           }>
           </Route>
         </Routes>
